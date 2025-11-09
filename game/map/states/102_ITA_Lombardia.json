@@ -1,0 +1,9 @@
+{
+    "id" : 102,
+    "name" : "STATE_ITA_LOMBARDIA",
+    "color" : [3, 201, 15],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_LOMBARDIA_MILANO"
+    ]
+}

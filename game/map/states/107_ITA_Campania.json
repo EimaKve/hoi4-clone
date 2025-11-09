@@ -1,0 +1,9 @@
+{
+    "id" : 107,
+    "name" : "STATE_ITA_CAMPANIA",
+    "color" : [4, 48, 185],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_CAMPANIA_NAPOLI",
+    ]
+}

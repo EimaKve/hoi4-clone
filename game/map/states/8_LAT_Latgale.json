@@ -1,0 +1,10 @@
+{
+    "id" : 8,
+    "name" : "STATE_LAT_LATGALE",
+    "color" : [43, 96, 13],
+    "owner" : "LAT",
+    "cities" : [
+        "CITY_LATGALE_DAUGAVPILS",
+        "CITY_LATGALE_REZEKNE"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "id" : 108,
+    "name" : "STATE_ITA_CALABRIA",
+    "color" : [46, 113, 32],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_CALABRIA_REGGIO_CALABRIA",
+    ]
+}

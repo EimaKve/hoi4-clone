@@ -1,0 +1,9 @@
+{
+    "id" : 103,
+    "name" : "STATE_ITA_VENETO",
+    "color" : [171, 24, 142],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_VENETO_VENEZIA"
+    ]
+}

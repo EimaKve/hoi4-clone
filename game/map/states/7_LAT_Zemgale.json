@@ -1,0 +1,10 @@
+{
+    "id" : 7,
+    "name" : "STATE_LAT_ZEMGALE",
+    "color" : [85, 123, 216],
+    "owner" : "LAT",
+    "cities" : [
+        "CITY_ZEMGALE_JEKABPILS",
+        "CITY_ZEMGALE_JELGAVA"
+    ]
+}

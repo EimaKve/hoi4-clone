@@ -1,0 +1,9 @@
+{
+    "id" : 4,
+    "name" : "STATE_LIT_KLAIPEDA",
+    "color" : [43, 84, 53],
+    "owner" : "LIT",
+    "cities" : [
+        "CITY_KLAIPEDA_KLAIPEDA"
+    ]
+}

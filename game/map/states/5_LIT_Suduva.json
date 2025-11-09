@@ -1,0 +1,9 @@
+{
+    "id" : 5,
+    "name" : "STATE_LIT_SUDUVA",
+    "color" : [85, 201, 171],
+    "owner" : "LIT",
+    "cities" : [
+        "CITY_SUDUVA_MARIJAMPOLE"
+    ]
+}

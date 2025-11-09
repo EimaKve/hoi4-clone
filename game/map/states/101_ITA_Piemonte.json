@@ -1,0 +1,9 @@
+{
+    "id" : 101,
+    "name" : "STATE_ITA_PIEMONTE",
+    "color" : [3, 15, 205],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_PIEMONTE_GENOVA"
+    ]
+}

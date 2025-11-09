@@ -1,0 +1,9 @@
+{
+    "id" : 104,
+    "name" : "STATE_ITA_EMILIA_ROMAGNA",
+    "color" : [3, 210, 215],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_EMILIA_ROMAGNA_BOLOGNA"
+    ]
+}

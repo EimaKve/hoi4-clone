@@ -1,0 +1,9 @@
+{
+    "id" : 110,
+    "name" : "STATE_ITA_SARDEGNA",
+    "color" : [4, 111, 160],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_SARDEGNA_CAGLIARI",
+    ]
+}

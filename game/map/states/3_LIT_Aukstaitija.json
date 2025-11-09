@@ -1,0 +1,9 @@
+{
+    "id" : 3,
+    "name" : "STATE_LIT_AUKSTAITIJA",
+    "color" : [127, 168, 159],
+    "owner" : "LIT",
+    "cities" : [
+        "CITY_AUKSTAITIJA_PANEVEZYS"
+    ]
+}

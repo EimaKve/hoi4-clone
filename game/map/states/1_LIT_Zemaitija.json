@@ -1,0 +1,10 @@
+{
+    "id" : 1,
+    "name" : "STATE_LIT_ZEMAITIJA",
+    "color" : [85, 87, 181],
+    "owner" : "LIT",
+    "cities" : [
+        "CITY_ZEMAITIJA_TELSIAI",
+        "CITY_ZEMAITIJA_SIAULIAI"
+    ]
+}

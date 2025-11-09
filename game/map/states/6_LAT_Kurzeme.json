@@ -1,0 +1,10 @@
+{
+    "id" : 6,
+    "name" : "STATE_LAT_KURZEME",
+    "color" : [127, 32, 9],
+    "owner" : "LAT",
+    "cities" : [
+        "CITY_KURZEME_LIEPAJA",
+        "CITY_KURZEME_VENTSPILS"
+    ]
+}

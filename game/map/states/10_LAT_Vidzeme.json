@@ -1,0 +1,9 @@
+{
+    "id" : 10,
+    "name" : "STATE_LAT_VIDZEME",
+    "color" : [128, 108, 159],
+    "owner" : "LAT",
+    "cities" : [
+        "CITY_VIDZEME_VALMIERA"
+    ]
+}

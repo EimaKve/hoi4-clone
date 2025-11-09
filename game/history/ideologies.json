@@ -1,0 +1,23 @@
+{
+    "parents" : {
+        "IDEOLOGY_DEMOCRACY" : {
+            "color" : [0, 0, 255]
+        },
+
+        "IDEOLOGY_OTHER" : {
+            "color" : [124, 124, 124]
+        }
+    },
+
+    "ideologies" : {
+        "IDEOLOGY_OTHER_OLIGARCHISM" : {
+            "parent" : "IDEOLOGY_OTHER",
+            "color" : [124, 124, 124]
+        },
+
+        "IDEOLOGY_DEMOCRACY_LIBERALISM" : {
+            "parent" : "IDEOLOGY_DEMOCRACY",
+            "color" : [0, 102, 255]
+        }
+    }
+}

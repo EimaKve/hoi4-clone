@@ -1,0 +1,10 @@
+{
+    "id" : 99,
+    "name" : "STATE_ITA_ROMA",
+    "color" : [172, 15, 202],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_ROMA_ROMA",
+        "CITY_ROMA_ROMA"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "id" : 2,
+    "name" : "STATE_LIT_VILNIUS",
+    "color" : [43, 120, 193],
+    "owner" : "LIT",
+    "cities" : [
+        "CITY_VILNIUS_VILNIUS"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "id" : 9,
+    "name" : "STATE_LAT_RIGA",
+    "color" : [127, 126, 89],
+    "owner" : "LAT",
+    "cities" : [
+        "CITY_RIGA_RIGA"
+    ]
+}

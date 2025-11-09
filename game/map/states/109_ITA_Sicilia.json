@@ -1,0 +1,9 @@
+{
+    "id" : 109,
+    "name" : "STATE_ITA_SICILIA",
+    "color" : [173, 153, 17],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_SICILIA_PALERMO",
+    ]
+}

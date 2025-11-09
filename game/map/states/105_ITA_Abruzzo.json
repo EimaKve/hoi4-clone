@@ -1,0 +1,9 @@
+{
+    "id" : 105,
+    "name" : "STATE_ITA_ABRUZZO",
+    "color" : [172, 65, 12],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_ABRUZZO_AQUILA"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id" : 106,
+    "name" : "STATE_ITA_PUGLIA",
+    "color" : [88, 189, 81],
+    "owner" : "ITA",
+    "cities" : [
+        "CITY_PUGLIA_BARI",
+        "CITY_PUGLIA_TARANTO"
+    ]
+}

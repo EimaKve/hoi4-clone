@@ -1,0 +1,10 @@
+{
+    "id" : 0,
+    "name" : "STATE_LIT_KAUNAS",
+    "color" : [127, 204, 44],
+    "owner" : "LIT",
+    "cities" : [
+        "CITY_KAUNAS_KAUNAS",
+        "CITY_KAUNAS_UKMERGE"
+    ]
+}
