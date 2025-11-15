@@ -56,6 +56,8 @@ graphics_make :: proc(gs: ^GraphicsContext, window_res: [2]int) -> bool {
 		0, 0, 1, 0,
 		0, 0, 0, 1
 	}
+	ortho := glm.mat4Ortho3d(0, f32(1280.0), f32(720.0), 0, 0, 1)
+	gs.u_transform = ortho
 
 	gl.Enable(gl.DEPTH_TEST)
 	gl.DepthFunc(gl.LESS)
@@ -87,10 +89,8 @@ graphics_render :: proc(gs: ^GraphicsContext, m: Map, bg: [4]f32) {
 	gl.Clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
 
-	ortho := glm.mat4Ortho3d(0, f32(1280.0), f32(720.0), 0, 0, 1)
-
 	shader_use(gs.shader_state)
-	shader_uniformSet(gs.shader_state, "u_transform", ortho * gs.u_transform)
+	shader_uniformSet(gs.shader_state, "u_transform", gs.u_transform)
 
 	gl.StencilFunc(gl.ALWAYS, 1, 0xFF)
 	gl.StencilMask(0xFF)

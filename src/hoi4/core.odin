@@ -9,13 +9,13 @@ import "core:log"
 GlobalState :: struct {
 	filepath: string,
 
-	alloc_strings: runtime.Allocator,
+	alloc_strings, alloc_other: runtime.Allocator,
 
 	logger_backend: log.Logger,
-	alloc_strings_backend: mem.Dynamic_Arena,
+	alloc_strings_backend, alloc_other_backend: mem.Dynamic_Arena,
 
 	m: Map,
-	ideologies: Ideologies,
+	i: Ideologies,
 	gs: GraphicsContext,
 
 	player: ^Country,
@@ -30,11 +30,16 @@ globalState_init:: proc(g: ^GlobalState, root_path: string) {
 	mem.dynamic_arena_init(&g.alloc_strings_backend)
 	g.alloc_strings = mem.dynamic_arena_allocator(&g.alloc_strings_backend)
 
+	mem.dynamic_arena_init(&g.alloc_other_backend)
+	g.alloc_other = mem.dynamic_arena_allocator(&g.alloc_other_backend)
+
 	g.logger_backend = log.create_console_logger()
 }
 
 globalState_free:: proc(g: ^GlobalState) {
 	mem.dynamic_arena_destroy(&g.alloc_strings_backend)
+	mem.dynamic_arena_destroy(&g.alloc_other_backend)
+
 	log.destroy_console_logger(g.logger_backend)
 
 	g^ = {}

@@ -1,4 +1,9 @@
 {
     "tag" : "LAT",
-    "color" : [75, 77, 186]
+    "color" : [75, 77, 186],
+    "ruling_ideology" : "IDEOLOGY_OTHER_OLIGARCHISM",
+    "ideologies" : {
+        "IDEOLOGY_OTHER_OLIGARCHISM" : 80,
+        "IDEOLOGY_DEMOCRACY_LIBERALISM" : 20
+    },
 }

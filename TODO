@@ -1,0 +1,15 @@
+Programming TODO:
+- Add an allocator for LUTs
+- Fix zooming in out
+- Figure out how to do proper country borders
+
+
+Game design TODO:
+- Figure out how land combat would work
+- Rework "civilian, war" economies
+- Make democratic nations more fun
+- Differentiate democratic playstyles: ones that go more collectivist, others that go more individualist
+- Figure out how you could remove war goals
+- Figure out how air combat would work
+- Figure out how navy combat would work
+- Figure out how to implement focus trees or if something else should be thought of

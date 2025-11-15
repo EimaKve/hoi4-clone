@@ -45,9 +45,11 @@ Country :: struct {
 	tag: [3]u8,
 	id: int,
 
-	color: [4]f32,
-
+	ruling_ideology: ^Ideology,
+	popularity_ideology: []f32,
 	states: [dynamic]^State,
+
+	color: [4]f32,
 }
 
 
@@ -111,20 +113,25 @@ map_initCountries :: proc(m: ^Map, g: GlobalState) {
 		root, is_parsed := jsonParseFile(&w, info, &path)
 		if (!is_parsed) { continue }
 
-		tag, is_string := root["tag"].(string)
-		if !is_string {
-			log.errorf("Field 'tag' is not a string for '%s': %v", path, tag)
-		}
+		color: [4]f32 = ---
+		tag, ideology: string = ---, ---
+		res: bool = ---
 
-		color, res := jsonFindColor_vec4(path, root["color"])
-		if !res {
-			continue
-		}
+		ideology, res = jsonGetField(root, path, "ruling_ideology", string)
+		if (!res) { continue }
+
+		color, res = jsonGetColor_vec4(root, path)
+		if (!res) { continue }
+
+		tag, res = jsonGetField(root, path, "tag", string)
+		if (!res) { continue }
+
 
 		c: Country
 		c.tag = {tag[0], tag[1], tag[2]}
 		c.color = color
 		c.states = make(type_of(c.states), 0, 8)
+		c.ruling_ideology = g.i.ideologies_LUT[ideology]
 		append(&m.countries, c)
 
 		free_all(context.temp_allocator)
@@ -191,7 +198,7 @@ map_initStates :: proc(m: ^Map, g: GlobalState) {
 			continue
 		}
 
-		color, res := jsonFindColor(path, root["color"])
+		color, res := jsonGetColor(root, path)
 		if (!res) { continue }
 
 		s: State

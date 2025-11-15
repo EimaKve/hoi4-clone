@@ -8,7 +8,8 @@ import os "core:os/os2"
 
 Ideologies :: struct {
 	parent_ideologies: [dynamic]ParentIdeology,
-	ideologies: [dynamic]Ideology
+	ideologies: [dynamic]Ideology,
+	ideologies_LUT: map[string]^Ideology,
 }
 
 ParentIdeology :: struct {
@@ -50,7 +51,7 @@ ideologies_make :: proc(i: ^Ideologies, g: GlobalState) -> bool {
 		parent: ParentIdeology
 		parent.namespace = strings.clone(namespace, g.alloc_strings)
 
-		color, is_successful := jsonFindColor_vec4(filepath, value.(json.Object)["color"])
+		color, is_successful := jsonGetColor_vec4(value.(json.Object), filepath)
 		if (!is_successful) { continue }
 
 		append(&i.parent_ideologies, parent)
@@ -62,7 +63,7 @@ ideologies_make :: proc(i: ^Ideologies, g: GlobalState) -> bool {
 		ideology: Ideology
 		ideology.namespace = strings.clone(namespace, g.alloc_strings)
 
-		color, is_successful := jsonFindColor_vec4(filepath, value.(json.Object)["color"])
+		color, is_successful := jsonGetColor_vec4(value.(json.Object), filepath)
 		if (!is_successful) { continue }
 
 		parent_string, is_string := jsonGetField(value.(json.Object), filepath, "parent", string)
@@ -72,6 +73,13 @@ ideologies_make :: proc(i: ^Ideologies, g: GlobalState) -> bool {
 		append(&i.ideologies, ideology)
 	}
 	log.infof("Created '%i' regular ideologies", len(i.ideologies))
+
+	i.ideologies_LUT = make(type_of(i.ideologies_LUT))
+	reserve(&i.ideologies_LUT, len(i.ideologies))
+
+	for &ideology in i.ideologies {
+		i.ideologies_LUT[ideology.namespace] = &ideology
+	}
 
 	free_all(context.temp_allocator)
 	return true
@@ -83,6 +91,9 @@ ideologies_delete :: proc(i: ^Ideologies) {
 	}
 	if i.ideologies != nil {
 		delete(i.ideologies)
+	}
+	if i.ideologies_LUT != nil {
+		delete(i.ideologies_LUT)
 	}
 
 	i^ = {}

@@ -1,7 +1,7 @@
 {
     "tag" : "LIT",
     "color" : [219, 219, 11],
-    "rulling_ideology" : "IDEOLOGY_OTHER_OLIGARCHISM",
+    "ruling_ideology" : "IDEOLOGY_OTHER_OLIGARCHISM",
     "ideologies" : {
         "IDEOLOGY_OTHER_OLIGARCHISM" : 80,
         "IDEOLOGY_DEMOCRACY_LIBERALISM" : 20
